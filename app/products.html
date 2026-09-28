@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos | Demo App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html">playwright-e2e-framework</a>
+        <div class="nav-links">
+          <a href="/login.html">Login</a>
+          <a href="/register.html">Cadastro</a>
+          <a href="/cart.html">Carrinho (<span data-testid="cart-badge">0</span>)</a>
+          <span data-testid="current-user">Visitante</span>
+          <button type="button" class="secondary" data-testid="logout-button" hidden>Sair</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="section-title">
+          <div>
+            <h1>Busca de produtos</h1>
+            <p class="muted">Use filtros textuais para validar cenários data-driven.</p>
+          </div>
+          <a class="button-link secondary" href="/cart.html">Ir para carrinho</a>
+        </div>
+        <div class="form-field">
+          <label for="searchInput">Buscar por nome ou categoria</label>
+          <input
+            id="searchInput"
+            data-testid="search-input"
+            type="search"
+            placeholder="Ex.: monitor"
+          />
+        </div>
+        <div class="alert success" role="alert" data-testid="products-feedback" hidden></div>
+        <div class="products-grid" data-testid="products-grid"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

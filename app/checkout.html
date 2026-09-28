@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Demo App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html">playwright-e2e-framework</a>
+        <div class="nav-links">
+          <a href="/products.html">Produtos</a>
+          <a href="/cart.html">Carrinho (<span data-testid="cart-badge">0</span>)</a>
+          <span data-testid="current-user">Visitante</span>
+          <button type="button" class="secondary" data-testid="logout-button" hidden>Sair</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="grid grid-2">
+        <div class="panel">
+          <div class="section-title">
+            <h1>Fluxo de checkout</h1>
+            <span class="badge">@smoke</span>
+          </div>
+          <div class="alert success" role="alert" data-testid="checkout-feedback" hidden></div>
+          <form data-testid="checkout-form">
+            <div class="form-field">
+              <label for="fullName">Nome completo</label>
+              <input id="fullName" name="fullName" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="address">Endereço</label>
+              <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-field">
+              <label for="cardNumber">Cartão</label>
+              <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" required />
+            </div>
+            <button type="submit">Finalizar pedido</button>
+          </form>
+          <section class="panel" data-testid="order-confirmation" hidden></section>
+        </div>
+        <aside class="summary-card">
+          <h2>Resumo do pedido</h2>
+          <div data-testid="checkout-summary"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
