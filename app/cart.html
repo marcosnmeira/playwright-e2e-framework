@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho | Demo App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html">playwright-e2e-framework</a>
+        <div class="nav-links">
+          <a href="/login.html">Login</a>
+          <a href="/register.html">Cadastro</a>
+          <a href="/products.html">Produtos</a>
+          <span data-testid="current-user">Visitante</span>
+          <button type="button" class="secondary" data-testid="logout-button" hidden>Sair</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="grid grid-2">
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço unitário</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody data-testid="cart-items"></tbody>
+          </table>
+        </div>
+        <aside class="summary-card">
+          <h1>Resumo do carrinho</h1>
+          <p>Total consolidado: <strong data-testid="cart-total">R$ 0,00</strong></p>
+          <a class="button-link" href="/checkout.html" data-testid="go-to-checkout"
+            >Finalizar checkout</a
+          >
+        </aside>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

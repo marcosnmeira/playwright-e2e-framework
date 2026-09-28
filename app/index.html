@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playwright E2E Framework Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html">playwright-e2e-framework</a>
+        <div class="nav-links">
+          <a href="/login.html">Login</a>
+          <a href="/register.html">Cadastro</a>
+          <a href="/products.html">Produtos</a>
+          <a href="/cart.html">Carrinho (<span data-testid="cart-badge">0</span>)</a>
+          <span data-testid="current-user">Visitante</span>
+          <button type="button" class="secondary" data-testid="logout-button" hidden>Sair</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero grid">
+        <span class="badge">Portfólio QA Automation</span>
+        <h1>Framework E2E com Playwright + TypeScript</h1>
+        <p>
+          Aplicação demo local para exercitar login, cadastro, busca de produtos e checkout com
+          cenários multi-browser e relatórios HTML.
+        </p>
+        <div class="nav-links">
+          <a class="button-link" href="/login.html">Executar fluxo de login</a>
+          <a class="button-link secondary" href="/products.html">Explorar catálogo</a>
+        </div>
+      </section>
+
+      <section class="grid grid-2 footer-note">
+        <div class="panel">
+          <h2>Credenciais seed</h2>
+          <p><strong>E-mail:</strong> qa@example.com</p>
+          <p><strong>Senha:</strong> Secret123!</p>
+        </div>
+        <div class="panel">
+          <h2>Recursos cobertos</h2>
+          <ul>
+            <li>Page Object Model</li>
+            <li>Fixtures e data-driven testing</li>
+            <li>HTML reports e screenshots em falhas</li>
+            <li>Execução em Chromium, Firefox e WebKit</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

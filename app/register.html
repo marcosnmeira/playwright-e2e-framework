@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | Demo App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html">playwright-e2e-framework</a>
+        <div class="nav-links">
+          <a href="/login.html">Login</a>
+          <a href="/products.html">Produtos</a>
+          <a href="/cart.html">Carrinho (<span data-testid="cart-badge">0</span>)</a>
+          <span data-testid="current-user">Visitante</span>
+          <button type="button" class="secondary" data-testid="logout-button" hidden>Sair</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel" style="max-width: 620px; margin: 0 auto">
+        <div class="section-title">
+          <h1>Cadastro de usuário</h1>
+          <span class="badge">@regression</span>
+        </div>
+        <div class="alert success" role="alert" data-testid="register-feedback" hidden></div>
+        <form data-testid="register-form">
+          <div class="grid grid-2">
+            <div class="form-field">
+              <label for="firstName">Nome</label>
+              <input id="firstName" name="firstName" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="lastName">Sobrenome</label>
+              <input id="lastName" name="lastName" type="text" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="registerEmail">E-mail</label>
+            <input id="registerEmail" name="email" type="email" required />
+          </div>
+          <div class="form-field">
+            <label for="registerPassword">Senha</label>
+            <input id="registerPassword" name="password" type="password" minlength="8" required />
+          </div>
+          <button type="submit">Criar conta</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
