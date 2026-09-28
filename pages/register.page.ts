@@ -6,7 +6,7 @@ import { BasePage } from './base.page';
 
 export class RegisterPage extends BasePage {
   private readonly selectors = {
-    firstName: this.page.getByLabel('Nome'),
+    firstName: this.page.getByLabel('Nome', { exact: true }),
     lastName: this.page.getByLabel('Sobrenome'),
     email: this.page.getByLabel('E-mail'),
     password: this.page.getByLabel('Senha'),
